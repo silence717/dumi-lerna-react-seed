@@ -1,4 +1,5 @@
 import { defineConfig } from 'dumi';
+import { resolve } from 'path';
 
 export default defineConfig({
   title: 'xm-design',
@@ -9,6 +10,9 @@ export default defineConfig({
   mode: 'site',
   resolve: {
     includes: ['docs', 'components'],
+  },
+  alias: {
+    'xm-design': resolve(__dirname, './components/index.ts'),
   },
   navs: {
     'zh-CN': [
